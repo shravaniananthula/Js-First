@@ -7,8 +7,8 @@ console.log(typeof valueInNumber)
 console.log(valueInNumber)
 
 
-//"33 => 33
-//'33abc => NaN
+//"33" => 33
+//'33abc' => NaN
 //true => 1; false = 0
 
 let isLoggedIn = "shravani"
@@ -23,3 +23,18 @@ console.log(booleanIsLoggedIn)
 let someNumber = 33
 let stringNumber = String(someNumber)
 console.log(typeof stringNumber)
+
+// ******** operations**********
+
+let value = 3
+let negValue = -value;
+console.log(negValue)
+
+console.log(2%3)
+
+let a = "shravani"
+let b = " ananthula"
+let c = a + b
+console.log(c)
+
+console.log("1" + 2)
