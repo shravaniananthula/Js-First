@@ -50,3 +50,22 @@ console.log(Object.values(tinderUser))//puts the values of object in array
 console.log(Object.entries(tinderUser))//puts each element index in single array
 
 console.log(tinderUser.hasOwnProperty('isLoggedIn'))//checks if that property is available or not
+
+
+const course = {
+    coursename: 'js in hindi',
+    price: 999,
+    teacher: "shravani"
+}
+
+//course.teacher
+
+const {teacher: inst} = course //de-structure an object 
+//instead of typing course.teacher everywhere just use this syntax
+console.log(inst)
+
+// {
+//     "name":"shravani",
+//     "coursename":"js in hindi",
+//     "price":"free"
+// }
