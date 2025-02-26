@@ -30,3 +30,30 @@ function loginUserMessage(username){
 }
 console.log(loginUserMessage()) //when you dont pass anything it shows undefined
 //the arguments here override the parameters given at the function definition
+
+function calculateCartPrice(val1,val2,...num1){ //rest operator
+    return num1 //returns array when rest operator used
+}
+
+console.log(calculateCartPrice(200,300,400))
+
+const user ={
+    username: "shravani",
+    price:199
+}
+
+function handleObject(anyObject){
+    console.log(`username is ${anyObject.username} and price is ${anyObject.price} `)
+}
+//handleObject(user)
+handleObject({
+    username: "shravani",
+    price:200
+}) //you can pass object to a function in this way also
+
+const myNewArray = [200,400,600,800]
+function returnSecondValue(getArray){
+    return getArray[1]
+}
+//console.log(returnSecondValue(myNewArray))
+console.log(returnSecondValue([200,400,600,800,1000]))
