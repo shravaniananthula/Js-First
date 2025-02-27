@@ -45,7 +45,7 @@ const users =[
 
 console.log(users[1].email)
 console.log(tinderUser)
-console.log(Object.keys(tinderUser))//puts the keys of the object together
+console.log(Object.keys(tinderUser))//puts the keys of the object together in array
 console.log(Object.values(tinderUser))//puts the values of object in array
 console.log(Object.entries(tinderUser))//puts each element index in single array
 
