@@ -1,7 +1,7 @@
 //for of--array loops
 //you use for of loop when you have the below pattern in an array
 //["","",""]
-//[{},{},{}]
+//[{},{},{}] ---for this you can use for each loop
 
 const arr = ["shrav","reddy","anan"]
 
