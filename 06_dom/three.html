@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code</title>
+</head>
+<body style = "background-color: aquamarine;">
+</body>
+<script>
+    const div = document.createElement('div')//first create element
+    console.log(div)
+    div.className = "main"
+    div.id = Math.round(Math.random() * 10 +1)
+    div.setAttribute("title","generate title") //you can set the attributes here also
+    div.style.backgroundColor = "blue"
+    div.style.padding = "12px"
+    //div.innerText = "chai aur code"//directly asssign text to div
+    const addText = document.createTextNode("chai aur code")
+    div.appendChild(addText)//another way to create text node and assign to div
+
+    document.body.appendChild(div)//add the div element to document object
+</script>
+</html>
