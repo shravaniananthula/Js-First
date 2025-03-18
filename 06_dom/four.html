@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shravani's code</title>
+</head>
+<body style="background-color: aqua; color:blue;">
+    <ul class="language">
+        <li> Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(lang){
+        const li = document.createElement("li")
+        console.log(li)
+        li.innerHTML = (`${lang}`) //if innerhtml is used you need to traverse the whole tree
+        document.querySelector(".language").appendChild(li)
+    }
+    addLanguage("python")
+    addLanguage("java")
+
+    function optiLanguage(lang){ //this approach is more optimized
+        const li = document.createElement("li")
+        console.log(li)
+        li.appendChild(document.createTextNode(lang))
+        document.querySelector(".language").appendChild(li)
+
+    }
+    optiLanguage("golang")
+
+    //Edit
+    const secondLang = document.querySelector("li:nth-child(2)")
+    console.log("some",secondLang)
+    //secondLang.innerHTML = "mojo"
+    const newLi = document.createElement("li")
+    newLi.textContent = "Mojo"
+    secondLang.replaceWith(newLi)
+
+    //edit
+    const firstLang = document.querySelector("li:first-child")
+    const newLis = document.createElement("li")
+    firstLang.outerHTML = "<li>zoom</li>"
+
+    //remove
+    const lastlang = document.querySelector("li:last-child")
+    lastlang.remove()
+</script>
+</html>
