@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Shravani Ananthula</h1>
+    <button id="stop">STOP</button>
+</body>
+<script>
+    const sayShravani = function(){
+        document.querySelector('h1').innerHTML = "Javascript is the best"
+        console.log('shravani')
+    }
+    //setTimeout(function(){
+    //    document.querySelector('h1').innerHTML = "Javascript is the best"
+    //    console.log('shravani')
+    //},2000)
+    const changeMe = setTimeout(sayShravani,2000) //2000 means 2sec as it is in millisec & setInterval means it keeps on doing same thing after some interval
+    //you can just give reference of that function also
+
+    //clearTimeout(changeMe)//give reference of timeout to remove that and not print new thing at all
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeMe)//you stop the changing of the title if you click on the stop button before 2 sec
+        console.log('stopped')
+    })
+    </script>
+</html>
