@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>I am the best</h1>
+    <button id="start">Start</button>
+    <button id="stop">STOP</button>
+</body>
+<script>
+    const sayDate = function(str){ //parameter is coming from setInterval
+    console.log(str, Date.now())
+   }
+   let intervalId = null; // Closure variable, NOT global
+
+document.querySelector("#start").addEventListener("click", function () {
+  if (!intervalId) { // Ensures only ONE interval runs at a time
+    intervalId = setInterval(sayDate, 1000, "hi");
+  }
+});
+
+document.querySelector("#stop").addEventListener("click", function () {
+  clearInterval(intervalId); // Stop the interval
+  intervalId = null; // Reset so "Start" can create a new interval
+});
+</script>
+</html>

@@ -188,3 +188,40 @@ function newGame() {
 }
 
 ```
+
+### project 5
+
+```javascript
+
+const randomColor = function () {
+  const hex = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += hex[Math.floor(Math.random() * 16)];
+  }
+  return color;
+};
+let interval;
+const startChangingColor = function () {
+  if (!interval) {
+    interval = setInterval(changeBycolor, 1000);
+  }
+  function changeBycolor() {
+    document.body.style.backgroundColor = randomColor();
+  }
+};
+
+console.log(randomColor());
+document.querySelector('#start').addEventListener('click', startChangingColor);
+document.querySelector('#stop').addEventListener('click', function () {
+  clearInterval(interval);
+  interval = null;
+});
+
+// const hex = '0123456789ABCDEF';
+// const randomIndex = Math.floor(Math.random() * 16); // Picks a number between 0-15
+// const randomChar = hex[randomIndex]; // Gets a random character from hex string
+// console.log(randomChar);
+
+
+```
